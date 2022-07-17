@@ -2,7 +2,7 @@ const express = require("express");
 const mongoose = require('mongoose');
 const Document = require('./models/document');
 
-const PORT = 3000
+const PORT = process.env.PORT || 5000;
 const DB_USER = process.env.DB_USER;
 const DB_PASS = process.env.DB_PASS;
 
@@ -74,7 +74,7 @@ app.get("/:id", async (req, res) => {
         res.render("code-display", { code: document.value, id })
     } catch (e) {
         console.log(e);
-        res.render("/");
+        res.redirect("/");
     }
 });
 
