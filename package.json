@@ -1,0 +1,15 @@
+{
+    "name": "hastbin-clone",
+    "version": "1.0.0",
+    "main": "app.js",
+    "license": "MIT",
+    "scripts": {
+        "app": "node app.js",
+        "dev": "ls *.js | entr -r node app.js"
+    },
+    "dependencies": {
+        "ejs": "^3.1.8",
+        "express": "^4.18.1",
+        "mongoose": "^6.4.4"
+    }
+}
